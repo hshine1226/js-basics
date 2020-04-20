@@ -1,29 +1,20 @@
-if(10 === 5){
-    console.log('hi');
-}
-else{
-    console.log('ho');
+const title = document.querySelector("#title");
+
+const BASE_COLOR = "aquamarine";
+const OTHER_COLOR = "#6ab04c";
+
+function handleClick() {
+    const currentColor = title.style.color;
+    if (currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    }
+    else{
+        title.style.color = BASE_COLOR;
+    }
 }
 
-if(10 > 5 && "junhyuk" === "junhyuk"){
-    console.log('yes');
+function init(){
+    title.style.color = BASE_COLOR;
+    title.addEventListener("mouseenter", handleClick);
 }
-else{
-    console.log('no');
-}
-
-if(10 > 5 || "junk" === "junhyuk"){
-    console.log('yes');
-}
-else{
-    console.log('no');
-}
-
-const age = prompt("How old are you?"); // 이건 완전 old js
-if (age > 18) {
-    console.log("you can drink");
-}
-else{
-    console.log("you can't")
-}
-
+init();
